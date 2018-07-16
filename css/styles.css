@@ -1,0 +1,75 @@
+/* main styles for two sprint application */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+  background-image: radial-gradient(ellipse farthest-corner at 45px 45px , rgb(47, 182, 226) 0%, rgba(0, 0, 255, .1) 50%, #0f7884 90%);
+  width: 100%;
+  height: 100vh;
+}
+
+/*Declaration varia for grid*/
+.content-header {
+  grid-area: header;
+}
+.content-section { grid-area: section;}
+.content-footer {
+  background: rgba(240,255,255,.4);
+  grid-area: footer;
+  text-align: center;
+  padding: 2% 0;
+}
+.content-main-application{
+    background:rgba(0,0,0,.4);
+    display: grid;
+    height:100vh;
+    margin: 0 auto;
+    width: 95%;
+    /*Mis grid*/
+    grid-template-areas:
+      'div-header-left  div-header-right'
+      'section section'
+      'footer footer';
+      grid-template-columns:5fr 2fr;
+      /*grid-template-columns: 5fr 5fr;/*para poner el ancho de cada columna*/
+      grid-template-rows:1fr 10fr 1fr;/*Sirve para poner el alto de las filas*/
+}
+.select-input-filters{
+    grid-area: div-header-left;
+}
+.showMoreFilters{
+   grid-area: div-header-right;
+   text-align: center;
+   padding-top: 1.5rem;
+}
+/*Footer styles*/
+.span-authors-information{
+  color:whitesmoke;
+  font-size:22px;
+  font-weight: bolder;
+  text-shadow:2px 1px 1px #000;
+}
+.select-input-filters, .showMoreFilters{
+  background:#8ec0e2;
+}
+/***************** Styles items header ********************/
+.controls-filters{
+  width: 45%;
+  font-size:16px;
+  height: 5vh;
+  margin: 2% 2%;
+}
+.showMoreFilters span{
+  font-size:18px;
+  border:1px solid #e2dede;
+  color:#fff;
+  cursor: pointer;
+  font-weight: bolder;
+  background: #45bd13;
+  padding: .5rem .5rem;
+}
+.showMoreFilters span:active{
+  box-shadow: 2px 1px 1px #000;
+}
