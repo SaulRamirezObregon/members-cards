@@ -7,7 +7,6 @@
 body{
   background-image: radial-gradient(ellipse farthest-corner at 45px 45px , rgb(47, 182, 226) 0%, rgba(0, 0, 255, .1) 50%, #0f7884 90%);
   width: 100%;
-  height: 100vh;
 }
 
 /*Declaration varia for grid*/
@@ -21,18 +20,37 @@ body{
   text-align: center;
   padding: 2% 0;
 }
+/*Carrusel*/
+.carrusel-content{
+  grid-area: content-carrusel;
+  background-color: transparent;
+  padding:1% 1%;
+  background:transparent;
+  text-align: center;
+}
+.button-left{
+  grid-area: button-left-carrusel;
+  background: transparent;
+  text-align: center;
+  padding:2% 0;
+}
+.button-right{
+  grid-area: button-right-carrusel;
+  background: transparent;
+}
+
+/**end carrusel*/
 .content-main-application{
-    background:rgba(0,0,0,.4);
+    background:rgba(0,0,0,.3);
     display: grid;
-    height:100vh;
     margin: 0 auto;
     width: 95%;
     /*Mis grid*/
     grid-template-areas:
-      'div-header-left  div-header-right'
-      'section section'
-      'footer footer';
-      grid-template-columns:5fr 2fr;
+      'div-header-left div-header-left  div-header-right'
+      'button-left-carrusel content-carrusel button-right-carrusel'
+      'footer footer footer';
+      grid-template-columns:1fr 10fr 1fr;
       /*grid-template-columns: 5fr 5fr;/*para poner el ancho de cada columna*/
       grid-template-rows:1fr 10fr 1fr;/*Sirve para poner el alto de las filas*/
 }
@@ -56,20 +74,177 @@ body{
 }
 /***************** Styles items header ********************/
 .controls-filters{
-  width: 45%;
+  width: 20%;
   font-size:16px;
   height: 5vh;
   margin: 2% 2%;
 }
 .showMoreFilters span{
-  font-size:18px;
+  display: none;
+  font-size:16px;
   border:1px solid #e2dede;
   color:#fff;
   cursor: pointer;
   font-weight: bolder;
   background: #45bd13;
-  padding: .5rem .5rem;
 }
 .showMoreFilters span:active{
   box-shadow: 2px 1px 1px #000;
+}
+
+/**************** Carrusel styles **************/
+.profile-card{
+  background:#fff;
+  max-width:300px;
+  height: 450px;
+  margin: 0% 1%;
+  box-shadow:10px 5px 0px #6b6b70;
+  cursor:pointer;
+  text-align: center;
+  float: left;
+  position: relative;
+}
+/**Eefcto tarjet**/
+.wrap{
+	width: 300px;
+  height: 500px;
+	margin: 0 1%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+  float: left;
+}
+
+.tarjeta-wrap{
+	margin: 1%;
+	-webkit-perspective: 800;
+	perspective: 800;
+  background:transparent;
+}
+
+.tarjeta{
+	width: 300px;
+	height: 100%;
+	background: #fff;
+	position: relative;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transition: .7s ease;
+	transition: .7s ease;
+	-webkit-box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.65);
+	box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.65);
+
+}
+
+.adelante, .back-card{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.adelante{
+	width: 100%;
+}
+
+.back-card{
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+  flex-direction: column;
+	font-family: "open sans";
+  background-color:#d0cdd3;
+  text-align: justify;
+  padding:0 4%;
+  font-size:14px;
+}
+
+.tarjeta-wrap:hover .tarjeta{
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+.img-profile{
+  width:100%;
+  margin:0 auto;
+}
+.information-basic{
+  width:100%;
+  text-align:center;
+}
+.profile-elements{
+  color:#000;
+  margin: 4% 0;
+  letter-spacing:3px;
+}
+/*Clases for information cards  */
+.item_name{
+  font-size: 2em;
+}
+.item-puesto{
+  font-weight: bolder;
+}
+/*/////////////////////////////////*/
+/*** styles for card back part****/
+.representative-photo{
+  width: 100px;
+  height: 100px;
+  box-shadow: 2px 2px 1px #000;
+  border-radius:50%;
+  margin: 2% auto;
+}
+.profile-description{
+  font-weight: bolder;
+  display: block;
+  color:blue;
+
+}
+.titles-information-card{
+  display: block;
+  font-weight: normal;
+  border-bottom:2px solid blue;
+  padding:3px;
+  cursor: pointer;
+  color:blue;
+  font-weight: bolder;
+}
+
+.content-social-networks{
+  text-align: center;
+}
+.content-social-networks  span{
+  width:50px;
+  height: 50px;
+  margin: .5% 3%;
+  background: yellow;
+  float: left;
+  border-radius: 50%;
+}
+.content-social-networks  span img{
+  position: relative;
+  border:1px solid #000;
+  width:100%;
+  height: 100%;
+  border-radius: 50%;
+}
+ul{
+  list-style: none;
+}
+/******** class for show or hide element********/
+.showContent-Profile{
+  background:rgb(29, 131, 163);
+  display: block;
+}
+.hiddeContent-Profile{
+  background:#ddc39f;
+  display: none;
 }

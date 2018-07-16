@@ -1,0 +1,97 @@
+{
+    "perfil":[
+        {
+        "noPerfil": 1,
+        "nombre": "saul ramirez obregon",
+        "edad": 22,
+        "descripcion":"Me considero una persona sencilla, amigable, me gusta aprender cosas nuevas, escuchar música y convivir con mi familia, a veces me preocupo más de lo normal",
+        "puesto": "miembro bootcamp",
+        "celula": "sciars-developers",
+        "skills": ["javascript","html","css","php","java","c#",".net"],
+        "fotos": {
+            "avatar": "./assets/profiles/img/saul-avatar.jpg",
+            "perfil":"./assets/profiles/img/saul-perfil.jpg",
+            "representativa": "./assets/profiles/img/saul-representativa.png"
+        },
+        "gustos": {
+            "personales": ["escuchar música","caminata","aprender","enseñar","convivir","diseñar"],
+            "profesionales": ["full-stack","diseño gráfico","DJ"]
+        },
+        "mediosContacto": {
+                "facebook": "chawita.canelo",
+                "twitter": null,
+                "instagram": "saul_r.o"
+        }
+        },
+        {
+        "noPerfil": 2,
+        "nombre": "rafael torres ceja",
+        "edad": 22,
+        "descripcion":"Estudiante de ing sistemas en 9no cuatrimestre, conocimiento en html básico, ingles intermedio",
+        "puesto": "miembro bootcamp",
+        "celula": "sciars-developers",
+        "skills": ["Dar buenas ideas de creación"],
+        "fotos": {
+            "avatar": "./assets/profiles/img/rafael-avatar.gif",
+            "perfil":"./assets/profiles/img/rafael-perfil.jpg",
+            "representativa": "./assets/profiles/img/rafael-representativa.jpg"
+        },
+        "gustos": {
+            "personales": ["fiesta","social","deportes","ejercicio","cine","videojuegos"],
+            "profesionales": ["me gusta ser la persona que asigne tareas","me gusta poner calidad en mi trabajo (visual)"]
+        },
+        "mediosContacto": {
+                "facebook": "rafael torres",
+                "twitter": null,
+                "instagram": null
+        }
+        },
+        {
+        "noPerfil": 3,
+        "nombre": "sebastian martha garcía",
+        "edad": 24,
+        "descripcion":"Soy desarrollador web y llevo inmerso en el mundo de la informática desde los 15 años. Me encanta programar y todo lo relacionado con las nuevas tecnologías.",
+        "puesto": "miembro bootcamp",
+        "celula": "royal-developers",
+        "skills": ["javascript","html","css","jquery","bootstrap"],
+        "fotos": {
+            "avatar":"./assets/profiles/img/sebastian-avatar.jpeg" ,
+            "perfil":"./assets/profiles/img/sebastian-perfil.png",
+            "representativa":"./assets/profiles/img/sebatian-representativa.jpeg"
+        },
+        "gustos": {
+            "personales": ["correr","comer","dormir","programar","aprender","enseñar"],
+            "profesionales": ["full-stack","inglés","profesor"]
+        },
+        "mediosContacto": {
+                "facebook": "sebas.martha",
+                "twitter": "@sebasMartha69",
+                "instagram": "sebas.martha"
+        }
+
+        },
+        {
+        "noPerfil": 4,
+        "nombre": "camilo marcos antonio salazar pelaéz",
+        "edad": 21,
+        "descripcion":"",
+        "puesto": "miembro bootcamp",
+        "celula": "sciars-developers",
+        "skills": ["javascript","html","css","php","java","c#","sql"],
+        "fotos": {
+            "avatar": "./assets/profiles/img/camilo-avatar.jpg",
+            "perfil":"./assets/profiles/img/camilo-perfil.jpg",
+            "representativa": "./assets/profiles/img/camilo-representativa.jpg"
+        },
+        "gustos": {
+            "personales": ["Dormir","Música de piano", "Tocar Violín", "Tocar Guitarra", "Estar en familia", "Programar", "Prácticar", "Convivir"],
+            "profesionales": ["Desarrollo Front End", "Desarrollo Back end", "Testing"]
+        },
+        "mediosContacto": {
+                "facebook": "camilo.salazar",
+                "twitter": "@camiloSalazar",
+                "instagram": "camilo.salazar"
+        }
+        }
+    ]
+}
